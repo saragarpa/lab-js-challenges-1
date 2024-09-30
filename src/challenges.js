@@ -29,12 +29,11 @@ function howManyTimes(arr, wordSearch) {
 // Iteration 2 | Number Sequence
 function createSequence(n) {
   const numArray = [];
+  if (n === 0) {
+    return numArray;
+  }
   for (let i = 0; i <= n; i++) {
-    if (n === 0) {
-      return numArray;
-    } else {
-      numArray.push(i);
-    }
+    numArray.push(i);
   }
   return numArray;
 }
@@ -104,7 +103,6 @@ function uniquifyArray(wordsArr) {
   if (!wordsArr.length) {
     return null;
   }
-
   const uniqueArr = [];
   for (let i = 0; i < wordsArr.length; i++) {
     const word = wordsArr[i];
